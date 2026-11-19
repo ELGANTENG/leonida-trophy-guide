@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI, all 55 PS5 trophies</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; works offline</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="tagline">All 55 trophies — every name, description and grade as PlayStation publishes them — with a guide to each in our own words, a roadmap to the platinum, and a tracker that remembers your progress.</p>
+    <div class="progress-wrap" aria-label="Overall progress">
+      <div class="progress-line"><span id="progress-text">0 of 55 earned</span><span id="progress-pct">0%</span></div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+      <div class="grade-counts" id="grade-counts"></div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <button type="button" data-view="tracker" class="active">Tracker</button>
+  <button type="button" data-view="roadmap">Roadmap to Platinum</button>
+  <button type="button" data-view="missables">Missables</button>
+  <button type="button" data-view="sources">Sources &amp; About</button>
+</nav>
+
+<main>
+  <section id="view-tracker" class="view">
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search a trophy or guide…" aria-label="Search trophies">
+      <select id="kind" aria-label="Filter by kind">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="missable">Missable</option>
+        <option value="collectibles">Collectibles</option>
+        <option value="activities">Activities</option>
+        <option value="completion">100% completion</option>
+        <option value="platinum">Platinum</option>
+        <option value="online">Online</option>
+      </select>
+      <select id="grade" aria-label="Filter by grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+      <select id="earned-filter" aria-label="Filter by earned state">
+        <option value="all">Earned + unearned</option>
+        <option value="earned">Earned only</option>
+        <option value="unearned">Not earned yet</option>
+      </select>
+      <label class="spoiler"><input id="spoiler" type="checkbox" checked> Hide story spoilers</label>
+    </div>
+    <div class="controls sub">
+      <button id="export" type="button">Export progress (.json)</button>
+      <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+      <button id="reset" type="button">Reset progress</button>
+      <span id="result-count" class="count"></span>
+    </div>
+    <p id="online-note" class="note hidden">There are no online trophies in GTA VI at launch — all 55 are single-player and offline, so this filter is empty by design.</p>
+    <ul id="list" class="trophy-list"></ul>
+    <p id="empty" class="note hidden">No trophies match these filters.</p>
+  </section>
+
+  <section id="view-roadmap" class="view hidden">
+    <p class="lede">Five stages, in order. Finish one before the next and the platinum lands on its own — PowerPyx puts the whole journey at about 200 hours, difficulty 4 out of 10. One playthrough is enough, and nothing but the first meditation can be missed.</p>
+    <ol id="roadmap" class="roadmap"></ol>
+  </section>
+
+  <section id="view-missables" class="view hidden">
+    <div class="warning">
+      <h2>One trophy can be missed: Positive Mental Attitude</h2>
+      <p>GTA 6 has <strong>no mission replay</strong>. The first meditation — Lucia on the balcony at Jason&rsquo;s house in Chapter 1, the morning after the mission <em>Down to Earth</em> — is gone once Chapter 1 ends. Whether that session is required for the trophy is still unconfirmed, so do it anyway: talk to Lucia in the kitchen in the morning, follow her to the balcony, and choose &ldquo;Accept&rdquo; when she offers to meditate.</p>
+      <p><strong>Keep a manual save at the start of every chapter</strong> and one before the final mission. Everything else — including the whole 100% completion checklist — can be finished in free roam after the credits.</p>
+    </div>
+    <h2>Missable trophies</h2>
+    <ul id="missable-list" class="trophy-list"></ul>
+    <h2>Safe either way</h2>
+    <p>PowerPyx and GTABase both report that nothing on the 100% completion checklist is missable: the checklist only asks for 15 of the 18 meditations, so the platinum stays reachable even if the Chapter 1 session is skipped — but only the trophy itself is at risk.</p>
+  </section>
+
+  <section id="view-sources" class="view hidden">
+    <h2>Where the facts come from</h2>
+    <p>Every trophy&rsquo;s name, description and grade are the official PlayStation list, as listed by Exophase and PSNProfiles before this guide was built. Every guide is written for this entry, in our own words — never copied from another guide. Each trophy&rsquo;s detail names the sources its facts came from; a step with no outside source says so, and cites the official description instead. Figures that were still being confirmed at launch (the four vague hidden trophies) are marked unconfirmed in their guides.</p>
+    <ul id="source-list" class="source-list"></ul>
+    <h2>About this guide</h2>
+    <p>Leonida Trophy Guide is a static web app: it runs entirely from its own files, makes no network request, and saves your checklist in your browser (localStorage). Export and import move your progress as a JSON file. No Rockstar Games logo, artwork or fonts are used; the look is our own Vice City sunset.</p>
+    <p class="fine">Grand Theft Auto and GTA are trademarks of Rockstar Games. This is an unofficial fan-made guide, built for make.fun&rsquo;s GTA 6 trophy guide bounty.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Guide &middot; 55 trophies &middot; 1 platinum, 2 gold, 6 silver, 46 bronze &middot; 28 hidden &middot; 1 potentially missable</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
